@@ -18,6 +18,7 @@ process.stdin
       ipc_command: '--input-ipc-server'
     }, [
       '--cookies',
+      '--ytdl-format=bestvideo[height<=?1080]+bestaudio/best',
       process.platform === 'win32' ? `--cookies-file="${directory}"` : `--cookies-file=${directory}`,
       process.platform === 'win32' ? `--ytdl-raw-options=cookies=\"${directory}\"` : `--ytdl-raw-options=cookies=${directory}`
     ])
